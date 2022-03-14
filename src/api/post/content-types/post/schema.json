@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Posts",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "watch_series": {
+      "type": "string",
+      "required": true
+    },
+    "released_year": {
+      "type": "date",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "float",
+      "unique": false,
+      "required": true
+    },
+    "watch_supporting_images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "watch_main_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "watch_brand": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::watch.watch",
+      "inversedBy": "post"
+    }
+  }
+}

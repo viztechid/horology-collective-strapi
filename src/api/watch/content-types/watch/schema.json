@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "watches",
+  "info": {
+    "singularName": "watch",
+    "pluralName": "watches",
+    "displayName": "Watches"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brand_names": {
+      "type": "string",
+      "required": true
+    },
+    "brand_origin": {
+      "type": "string",
+      "required": true
+    },
+    "post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post.post",
+      "mappedBy": "watch_brand"
+    }
+  }
+}
