@@ -63,6 +63,10 @@
         "EXCELLENT+5",
         "AS-IS"
       ]
+    },
+    "Availability": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
