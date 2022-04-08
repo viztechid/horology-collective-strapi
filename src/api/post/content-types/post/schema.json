@@ -4,7 +4,7 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Posts",
+    "displayName": "Watch Catalog",
     "description": ""
   },
   "options": {
@@ -45,11 +45,24 @@
         "images"
       ]
     },
-    "watch_brand": {
+    "description": {
+      "type": "text"
+    },
+    "watch_brands": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToMany",
       "target": "api::watch.watch",
-      "inversedBy": "post"
+      "inversedBy": "watch_catalogs"
+    },
+    "criteria": {
+      "type": "enumeration",
+      "enum": [
+        "UNUSED",
+        "MINT",
+        "NEAR MINT",
+        "EXCELLENT+5",
+        "AS-IS"
+      ]
     }
   }
 }
