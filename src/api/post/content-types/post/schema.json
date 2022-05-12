@@ -54,7 +54,7 @@
       "target": "api::watch.watch",
       "inversedBy": "watch_catalogs"
     },
-    "criteria": {
+    "condition": {
       "type": "enumeration",
       "enum": [
         "UNUSED",
@@ -67,6 +67,12 @@
     "Availability": {
       "type": "boolean",
       "default": true
+    },
+    "link_tokopedia": {
+      "type": "string"
+    },
+    "link_shopee": {
+      "type": "string"
     }
   }
 }
